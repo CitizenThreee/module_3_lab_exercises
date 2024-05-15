@@ -21,12 +21,7 @@ ReplaceMiddleAnimal("Koala")
 LogAnimals();
 
 function FindMatchingAnimals(beginsWith) {
-    const newArray = [];
-    for(let i = 0; i < animals.length; i++){
-        if(animals[i].toLowerCase().startsWith(beginsWith.toLowerCase())){
-            newArray.push(animals[i])
-        }
-    }
+    const newArray = animals.filter(animals => animals.toLowerCase().startsWith(beginsWith.toLowerCase()));
     return newArray;
 }
 
