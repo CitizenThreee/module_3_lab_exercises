@@ -14,9 +14,9 @@ function fetchURLData(url) {
     });
     return fetchPromise;
 }
-/*fetchURLData('https://jsonplacholder.typicode.com/todos/1')
+fetchURLData('https://jsonplacholder.typicode.com/todos/1')
     .then(data => console.log(data))
-    .catch(error => console.error(error.message));*/
+    .catch(error => console.error(error.message));
 
 async function asyncFetch() {
     let response = await fetch(url);
@@ -27,7 +27,7 @@ async function asyncFetch() {
     }
 }
     
-//asyncFetch('https://jsonplaceholder.typicode.com/todos/1').then(response => console.log(response)).catch(error => console.log(error.message))
+asyncFetch('https://jsonplaceholder.typicode.com/todos/1').then(response => console.log(response)).catch(error => console.log(error.message))
 
 async function asyncFetchAll() {
     let promises = [];
