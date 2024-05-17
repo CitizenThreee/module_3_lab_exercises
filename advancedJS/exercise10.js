@@ -1,6 +1,3 @@
-//run 'npm init' and accept all the defaults
-//run 'npm install node-fetch'
-//add this line to package.json after line 5: "type": "module",
 import fetch from 'node-fetch'
 globalThis.fetch = fetch
 function fetchURLData(url) {
@@ -14,11 +11,11 @@ function fetchURLData(url) {
     });
     return fetchPromise;
 }
-fetchURLData('https://jsonplacholder.typicode.com/todos/1')
+fetchURLData('https://jsonplaceholder.typicode.com/todos/1')
     .then(data => console.log(data))
     .catch(error => console.error(error.message));
 
-async function asyncFetch() {
+async function asyncFetch(url) {
     let response = await fetch(url);
     if (response.status === 200) {
         return response.json();
