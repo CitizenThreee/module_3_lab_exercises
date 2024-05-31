@@ -34,3 +34,5 @@ function Unique3(dupArray){
     })
     return endArray;
 }
+
+//Very good extensions! :)
