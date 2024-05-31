@@ -18,5 +18,10 @@ null + 1; /*result will be 1  */ console.log(null + 1); // 1
 undefined + 1; /*result will be NaN  */ console.log(undefined + 1);
 undefined == null; /*result will be true  */ console.log(undefined == null); // true
 undefined === null; /*result will be false  */ console.log(undefined === null); // false
+// \t is a special character for tab (tab key on the keyboard), and \n is a newline character. These are considered "whitespace characters" since they are adding empty space to the string. Space characters are also considered whitespace characters.
+// JavaScript ignores any whitespace characters in a string when converting to a number. Since the string is "empty" (because JS is ignoring the whitespace characters), the string gets implicitly converted to 0, and then - 2 would make it -2.
+//You can see whitespace characters in use like this:
+//console.log('\tI\thave tabs')
+//console.log('I have\nnew\nlines.\nThis is\npretty cool!')
 " \t \n" - 2; /*result will be NaN  */ console.log( " \t \n" - 2 ); // -2  || I thought that it would be NaN, but what I think is going on is that the string is converted to an html string because \t and \n are html symbols, and that must convert to 0 unlike a regular string
 

@@ -9,4 +9,14 @@ Function.prototype.delay = function(delay){
     }
     
 }
+
+//Example using apply for part b:
+/*
+Function.prototype.delay = function(delay) {
+    let func = this;
+    return function(...args) {
+        setTimeout(() => func.apply(null, args), delay)
+    }
+}
+*/
 multiply.delay(500)(5, 5, 5, 5); // prints 25 after 500 milliseconds

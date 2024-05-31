@@ -38,6 +38,9 @@ console.log("----------------------Get author titles-----------------------")
 console.log(GetTitles("A"));
 
 //This is easier way of doing it than using forEach and find?
+//sort is an easier way to do this than using forEach and find
+//The exercise asks for find and forEach just to gain better understanding of those 2 methods
+//but it is better to use sort.
 function LatestBook(){
     const booksSort = [...books];
     booksSort.sort((book1, book2) => book1.year - book2.year);
@@ -48,6 +51,7 @@ console.log("----------------------Get latest book-----------------------")
 console.log(LatestBook());
 
 //I wasn't sure how I was supposed to find the latest date with forEach and find, like this? There are much better ways of doing it to my knowledge
+//Yep, this is correct. You are right, when doing something like this in the real world it would be better to use sort.
 function LatestBook2(){
     let latestBook;
     books.forEach((book, index) => {
